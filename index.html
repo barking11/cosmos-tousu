@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>投诉指引</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9c45e024-35ae-462d-a213-6ebd9047e108" class="page sans"><header><h1 class="page-title">投诉指引</h1><p class="page-description"></p></header><div class="page-body"><h2 id="ee360a7e-cbb8-4f45-816c-be0e9e472454" class=""><strong>一. 韩小多短剧声明</strong></h2><p id="7c156009-0aeb-4f0d-a925-72eaf3f1f2b0" class="">“<strong>韩小多短剧</strong>”为中立的平台服务提供方，仅为用户提供信息存储空间，“<strong>韩小多短剧</strong>”不对用户及商家在平台上发表、转载的内容提供任何形式的保证。根据《民法典》、《电子商务法》、《信息网络传播权保护条例》及其他相关法律法规的规定，“<strong>韩小多短剧</strong>”特制定本侵权投诉指引，任何第三方（包括但不限于个人、公司、企业、社会团体等）认为平台上的短剧等存在侵犯其合法权益的内容，均可按照本指引向“<strong>韩小多短剧</strong>”通过平台设置的举报功能进行相关反馈。</p><p id="1db89e7c-3991-43b9-b59f-38fb38509d30" class="">如果发现“<strong>韩小多短剧</strong>”平台上的笔记、商品、服务或直播等存在侵犯他人合法权益，而自身并非相关权利人或不符合相关侵权投诉资质时，您可以通过“<strong>韩小多短剧</strong>”平台设置的举报功能进行相关反馈，“<strong>韩小多短剧</strong>”将独立进行调查处理并及时答复结果。</p><p id="4078c854-f11e-4534-ac92-043ed024dc48" class=""><strong>侵权投诉是一项严肃的法律行为，根据国家相关法律规定，在“韩小多短剧”平台进行侵权投诉、反通知及相关申诉时，应提供己方的真实身份信息，“韩小多短剧”平台不接受任何形式的匿名投诉。</strong></p><h2 id="39a95632-5b38-41ac-b690-568b3bd99e06" class=""><strong>二. 侵权投诉受理案由</strong></h2><p id="4a93415f-c40d-4312-838e-01c50e9852a6" class="">“<strong>韩小多短剧</strong>”为中立的平台服务提供方，受理下列三大类侵权投诉，共计九种案由：</p><ol type="1" id="7bc0cda7-c508-421a-974f-e29125d43abf" class="numbered-list" start="1"><li>侵犯自然人人身权益的情形，包括：名誉中伤、肖像权及隐私泄露、假冒个人身份；</li></ol><ol type="1" id="2e03476b-e740-4a97-8760-606816444ca9" class="numbered-list" start="2"><li>侵犯知识产权的情形，包括：商标（<strong>含假冒伪劣</strong>）、专利、著作权（<strong>含定向搬运内容的假账号投诉</strong>）、商业秘密；</li></ol><ol type="1" id="beab87bd-1b32-4ef8-b74b-262e4b59802f" class="numbered-list" start="3"><li>其他侵犯企业合法权益的情形，包括：<strong>商誉诋毁、</strong>假冒企业身份（非注册商标）。</li></ol><p id="cdb57118-b56a-4fea-988c-8c234efa71d6" class="">对于不属于侵权投诉范畴内的违法违规内容，建议通过<strong>韩小多短剧</strong>App举报功能进行反馈。</p><h2 id="aaa32398-4f4b-48d6-9630-6489fdcdc879" class=""><strong>三. 侵权投诉渠道</strong></h2><p id="1457d880-520c-477e-9f94-b538398c12a0" class="">为高效解决侵权问题，“<strong>韩小多短剧</strong>”建议权利人可以直接与对方协商解决，当您无法联系或协商无效时，可以通过如下方法向“<strong>韩小多短剧</strong>”进行侵权投诉。</p><p id="0459408f-9e1c-42e7-bf98-504dc5390353" class="">1.APP端线上投诉 ：作为权利人，如果您在使用<strong>韩小多短剧</strong>APP的过程中发现某篇笔记或商品存在侵犯您合法权益的情况，您可以进入该篇笔记或商品的浏览页面，通过APP设置在举报功能界面中的“侵权投诉”功能进行线上投诉。</p><p id="7530d5d8-8697-4439-a744-bca1aa1e625b" class="">2.短剧侵权邮箱投诉：若您需要批量投诉短剧，您可以根据本侵权投诉指引的要求，将相关资质、侵权投诉通知书及初步证明材料发送至：hxdcustomerservice<a href="mailto:qinquan@xiaohongshu.com">@163.com邮箱。</a></p><ul id="d0f3ee99-b895-42df-b14f-3fce75bcb30d" class="bulleted-list"><li style="list-style-type:disc">注意：为加快侵权投诉审核环节，“<strong>韩小多短剧</strong>”更推荐您使用APP端线上投诉哦。其中短剧<strong>侵权邮箱投诉渠道处理周期会比较长。</strong></li></ul><h2 id="c4d19258-f9f6-4337-bd4f-e89c7dc5cac4" class=""><strong>四. 侵权通知程序</strong></h2><p id="1e9ac64f-ad5f-4834-b24b-2479eff1fe48" class="">如权利人认为“T<strong>韩小多短剧</strong>”平台上的用户昵称、短剧等内容侵犯了其合法个人权益、企业权益的，请按照以下流程及要求向“<strong>韩小多短剧</strong>”发起书面投诉。</p><ol type="1" id="c69b7abf-fb7e-43bd-bb08-00af669d6f5b" class="numbered-list" start="1"><li>权利人下载 <mark class="highlight-blue">侵权投诉通知书</mark>.<mark class="highlight-blue">docx</mark> ，按照表中要求填写信息并准备初步证明材料（按照第六项标准）。<figure id="1c6b71e8-d32c-42d1-bc5d-864fd8746163"><div class="source"><a href="%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95%209c45e02435ae462da2136ebd9047e108/%25E4%25BE%25B5%25E6%259D%2583%25E6%258A%2595%25E8%25AF%2589%25E9%2580%259A%25E7%259F%25A5%25E4%25B9%25A6.docx">侵权投诉通知书.docx</a></div></figure></li></ol><ol type="1" id="3f096690-eeae-4774-b4b0-eddfeaecc437" class="numbered-list" start="2"><li>将填写完的 侵权投诉通知书.docx 及初步证明材料作为附件，以“权利人姓名+投诉案由”为邮件名，发送到第三项标准中指定的邮箱（文件应为打印后盖章/签字的扫描版本；要求冻结、屏蔽、删除的侵权链接的投诉，应提供word或excel附件，并列明准确名称、网页截图及在“<strong>韩小多短剧</strong>”上的链接地址）。主要的事实、理由、被投诉目标以及相应请求，请在邮件正文中予以撰写清楚。</li></ol><ol type="1" id="4ad3a705-ad86-4545-bcc6-c5d4752a311b" class="numbered-list" start="3"><li>“<strong>韩小多短剧</strong>”收到材料后会进行形式审核。对于符合要求的投诉予以处理，对于案由不明、材料不符或其他不符合要求的情况， “<strong>韩小多短剧</strong>”不予受理，直至权利人补充完整资料。 “<strong>韩小多短剧</strong>”正式受理投诉之后，会对材料内容进行表面审核并作出审核结果。如投诉审核通过， “<strong>韩小多短剧</strong>”会采取相应措施防止损害进一步扩大。</li></ol><ol type="1" id="601fe5d2-220e-410f-ba90-5e178515f489" class="numbered-list" start="4"><li>“<strong>韩小多短剧</strong>”在审查过程中有权视具体情况要求权利人提供或补充相应材料，权利人应在“<strong>韩小多短剧</strong>”设定的合理期限内予以答复或补充，期满未作答复或补充的，视为权利人撤回投诉。权利人也可主动在转发【原投诉邮件】基础上要求撤回投诉。无论是权利人主动撤回还是被视为撤回，“<strong>韩小多短剧</strong>”有理由认为原被投诉的侵权情况自始不存在。若在“<strong>韩小多短剧</strong>”对被投诉内容进行了处理之后权利人要求撤回投诉的，“<strong>韩小多短剧</strong>”可以准许，但就相同事实理由不再接受权利人的新投诉。</li></ol><ol type="1" id="6508971c-1b0e-4422-9c1e-21eee8a542b2" class="numbered-list" start="5"><li><strong>根据国家相关法律规定，“韩小多短剧”平台在收到投诉人的相关投诉材料后，可能将其转交被投诉用户或商家，以便双方积极举证。转交材料的范围将包括投诉人姓名、联系邮箱、权属证明及其他初步侵权证据，但不包括投诉人的私人电话、身份证件等隐私信息和投诉人提前声明不便转交的材料。</strong></li></ol><h2 id="0394b01a-bf3d-4ed6-973c-a28a61cb2536" class=""><strong>五. 反通知程序</strong></h2><p id="ebfd501c-1f66-4b22-bbe3-24a99a7d6be7" class="">投诉人应知晓，当“<strong>韩小多短剧</strong>”根据投诉人的申请及证明材料，自主决定采取冻结、屏蔽、删除等合理处置措施，随后会将通知及相关措施告知“<strong>韩小多短剧</strong>”的被投诉用户。</p><p id="95c9bcf8-b7e5-4794-a22a-bf79a188e9e6" class="">如“<strong>韩小多短剧</strong>”被投诉用户或商家认为其行为并未侵犯他人的合法权益，请在接到通知后的5个工作日内，按照以下流程及要求向“<strong>韩小多短剧</strong>”发起申诉。</p><ol type="1" id="962defe9-5214-4d53-9ce5-fc89e0779651" class="numbered-list" start="1"><li>被投诉用户或商家下载<mark class="highlight-blue">未侵权声明.docx</mark>，按照表中要求填写并准备申诉材料（按照第七项标准）。<figure id="e1d29030-f13d-49fb-a38c-51b04b715e29"><div class="source"><a href="%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95%209c45e02435ae462da2136ebd9047e108/%25E6%259C%25AA%25E4%25BE%25B5%25E6%259D%2583%25E5%25A3%25B0%25E6%2598%258E.docx">未侵权声明.docx</a></div></figure></li></ol><ol type="1" id="3c82ed79-e960-456b-8a5b-97f3e00cf8ad" class="numbered-list" start="2"><li>将填写完的未侵权声明.docx及申诉材料作为附件，以“申诉人姓名+申诉案由” 为邮件名，发送到第三项标准中指定的邮箱。</li></ol><ol type="1" id="7149fc11-0d7c-41b7-9658-2c07439fda4c" class="numbered-list" start="3"><li>“<strong>韩小多短剧</strong>”接到声明后会及时进行审核，同时将该声明转送至投诉人。若审核后认为被投诉用户或商家申诉理由充分、证据材料充足，“<strong>韩小多短剧</strong>”将视情况决定是否解除前述合理处置措施，并告知投诉人可以向有关主管部门投诉或者向人民法院起诉。在声明转达至投诉人后十五日内，“<strong>韩小多短剧</strong>”未收到权利人已经起诉或者起诉通知的，可解除前述合理处置措施。</li></ol><h2 id="d8c1f4a4-8cdb-4334-9c34-53125691d3a9" class=""><strong>六. 初步证明材料</strong></h2><p id="1866233d-b8a1-4b1c-8cfb-3a8ed4f0b753" class="">符合要求的侵权投诉通知，除上述提及的侵权投诉通知书.docx外，还应该提供如下四类证据：1. 投诉人身份证明文件；2. 委托证明文件（如有）；3. 自身权属的证明文件；4. 侵权事实的证明文件。</p><ol type="1" id="6febfb76-d2a1-4b12-be0c-5212dc0f32e7" class="numbered-list" start="1"><li>投诉人身份证明文件：<ul id="7e3389a5-233c-40e6-9e33-0846c03dd479" class="bulleted-list"><li style="list-style-type:disc">个人：包括有效期内的身份证、居民户口薄、护照、外国人居留证等。如提供居民身份证，请提供正反两面复印件；如提供其他证件，请提供证件首页和个人页复印件（或原件扫描件）。最常用的有效身份证件是有效期内的居民身份证。</li></ul><ul id="a67e8bd1-4fec-4031-8545-18c37216554c" class="bulleted-list"><li style="list-style-type:disc">公司、企业或社会团体：企事业单位及社会团体，需要提供有效期内的营业执照、事业单位法人证书、社会团体法人登记证书等证件的复印件（或原件扫描件）并加盖公章。</li></ul><ul id="342f62f3-e85a-4e15-a742-f06b0a00099f" class="bulleted-list"><li style="list-style-type:disc">境外公司主体：境外企业续存证明（经当地使、领馆认证）并提供对应的中文译本。</li></ul></li></ol><ul id="4da6e4ad-dd80-4440-8b42-c82571fae517" class="bulleted-list"><li style="list-style-type:disc"><strong>注意：“韩小多短剧”在收到上述文件材料后仅做身份认定审核，除根据转通知程序告知纠纷双方的姓名、公司名称及联系邮箱外，并不会将其他身份信息材料向任何第三方透露。</strong></li></ul><ol type="1" id="2d6fcdf8-171d-44e1-a1c2-aa75521e50ba" class="numbered-list" start="1"><li>委托证明文件: 如【权利人】委托他人处理侵权事宜，除第1项证明文件以外，还需提供真实、合法的授权委托书（权利人签名或盖章）以及代理人的身份证明文件（按第1项标准准备）。境外公司主体委托境内代理人的，其授权委托书应经使馆认证并提供中文译本。</li></ol><ol type="1" id="311c6210-b4f8-4dc0-a50f-67894b50453b" class="numbered-list" start="2"><li>自身权属的证明文件：<ul id="9b7b638f-2b6e-48e5-ad74-43f89d1fe7c4" class="bulleted-list"><li style="list-style-type:disc">人身权利侵权：<ul id="c87a6626-4d03-4e45-8cad-ba4d336889c7" class="bulleted-list"><li style="list-style-type:circle">肖像权：需手持身份证照片，以便审核验证投诉人即肖像对应的本人；</li></ul><ul id="bf12f1e4-a561-4e5e-8612-6b46b17da501" class="bulleted-list"><li style="list-style-type:circle">假冒个人身份：需手持身份证照片及自己具有特殊身份的相关证明。</li></ul></li></ul><ul id="17318e67-3202-4597-bbe5-cbe40a5238e7" class="bulleted-list"><li style="list-style-type:disc">知识产权侵权：<ul id="60530d00-80ca-4ae3-b83d-dc8231339258" class="bulleted-list"><li style="list-style-type:circle">著作权：著作权登记证书、创作手稿、作品发表时间证明、认证机构出具的权属证明以及取得著作权权利的合同等【其中图片的权属证明接受拍摄时场景图、psd格式文件、高清原图等】；著作权作品合法授权的样本【包括网站、书籍、实物照片等】，以便<strong>韩小多短剧</strong>进一步确认权属；</li></ul></li></ul></li></ol><blockquote id="c9013cb4-e3da-4de0-bc6e-6b1bc0ef4c90" class="">* “定向搬运内容的假账号”是指在<strong>韩小多短剧</strong>平台开设专门模仿某个知名博主的社交账号，用于搬运该博主在其他平台发布的视频、图片、文字等内容。对该类侵权行为投诉，除对被搬运内容的版权证明，权利人还应提供证据证明自己掌握着被搬运内容官方发布渠道的事实，如官方账号的后台管理界面截图。</blockquote><ul id="fbbd4742-161f-4615-ab00-671d69c57188" class="bulleted-list"><li style="list-style-type:disc">商标权：商标注册证、商标许可合同；</li></ul><ul id="c4a8096c-91a8-4232-b63d-c6d98d9929e4" class="bulleted-list"><li style="list-style-type:disc">专利权：专利证书、专利的权利要求与说明书等。</li></ul><ol type="1" id="7ea9af8f-ffff-4df0-a47f-3f6bb2dfb2e2" class="numbered-list" start="1"><li>侵权事实的证明文件：<ul id="207e18a0-799e-4972-b2f1-7ce64c46550e" class="bulleted-list"><li style="list-style-type:disc">自然人人身权益：<ul id="6c578990-bbf2-4d5d-a51c-26806fd1a9e0" class="bulleted-list"><li style="list-style-type:circle">名誉权：书面陈述恶意中伤、侮辱及内容系捏造诽谤的事实和产生的损害结果，以及其他证明相反事实的证据材料；</li></ul><ul id="c96d476c-5bad-400d-af84-27882d4faf4c" class="bulleted-list"><li style="list-style-type:circle">肖像权：书面陈述被投诉人未经授权使用自己肖像的事实；</li></ul><ul id="4635d0c3-70e3-41e0-ad5b-8cab85feb30f" class="bulleted-list"><li style="list-style-type:circle">隐私泄露：书面说明被泄露的信息属于个人隐私的原因；</li></ul><ul id="b94b0b57-7bde-434c-9b26-65580cf82f4b" class="bulleted-list"><li style="list-style-type:circle">假冒他人身份：书面陈述被投诉账号与自己的身份相关的事实，并提供自己具有特殊身份的相关佐证（如有）；</li></ul></li></ul><ul id="7feff582-496a-4d7a-8854-a79a316f733b" class="bulleted-list"><li style="list-style-type:disc">知识产权侵权：<ul id="487db5dc-8308-4806-8e92-6a7360bde509" class="bulleted-list"><li style="list-style-type:circle">著作权：被投诉内容抄袭复制的事实说明、被投诉内容未经授权的说明；</li></ul></li></ul></li></ol><blockquote id="4cbc6c6a-0860-43ed-b799-fc46539e64d8" class="">* 注意：针对定向搬运内容的假冒账号提出投诉：应另行提供在其他平台更早发布被搬运内容的事实证明。</blockquote><ul id="894864b1-b18c-445d-a085-3df848a57794" class="bulleted-list"><li style="list-style-type:disc">商标权：被投诉内容擅自使用商标的事实说明、被投诉内容未经授权的说明；</li></ul><ul id="f650e3a2-a64b-45dc-aa15-55352d9bc795" class="bulleted-list"><li style="list-style-type:disc">专利权：被投诉内容擅自使用专利的事实说明（需进行比对说明）、被投诉内容未经授权的说明。</li></ul><ul id="e0a9a97d-ca02-4a48-9322-9a6ffd032d77" class="bulleted-list"><li style="list-style-type:disc">其他企业权益受损：<ul id="96507f61-89b8-4ae6-8ec7-fa4cb718737b" class="bulleted-list"><li style="list-style-type:circle">商誉诋毁侵权：说明被投诉内容存在的不实之处、对被投诉内容事实的正确陈述并对其充分举证、对被投诉内容存在恶意的说明、对自身损害结果的陈述及佐证；</li></ul><ul id="f337249a-7da7-456d-802e-4015707b9638" class="bulleted-list"><li style="list-style-type:circle">假冒企业身份：说明被投诉账号与权利人无关且未经过任何授权、自身损害结果的陈述及佐证。</li></ul></li></ul><ol type="1" id="ab57bbbb-4115-43fe-83a2-4b90b0ff0e64" class="numbered-list" start="1"><li>其他形式要求：<ul id="03da494a-a718-4339-b009-ad6a6502a737" class="bulleted-list"><li style="list-style-type:disc">投诉时要求冻结、屏蔽、删除侵权链接的，请在邮件正文以文本形式提供准确链接地址，或通过word或excel附件中列明。</li></ul><ul id="26c2fb14-7f76-4780-bfed-cb903540be1f" class="bulleted-list"><li style="list-style-type:disc">联系方式： 权利人或代理人在 侵权投诉通知书.docx 中填写的电话、邮箱、地址应为有效的联系方式，且投诉人应保持通信畅通。如因权利人或代理人提供的联系方式不准确或有遗漏，无法及时收到反馈结果，由权利人或代理人自行承担不利后果。</li></ul><ul id="a3459859-5def-4f16-966c-d189aad84afe" class="bulleted-list"><li style="list-style-type:disc"><strong>韩小多短剧暂不接受除中文以外语言的投诉。外文投诉文件请附上中文翻译，韩小多短剧将以其中文翻译内容为准。We do not accept any complaint in languages other than Chinese. Please attach a Chinese translation to the complaint document in foreign language, and the Chinese translation will prevail.</strong></li></ul><ul id="8ad3fea8-7cc5-48cb-a830-a9a2d62358be" class="bulleted-list"><li style="list-style-type:disc"><strong>鉴于“韩小多短剧”在收到投诉/申诉的证据材料，可能根据转通知程序转呈争议另一方，故请在提供文件时请自行添加水印或者遮盖敏感信息。*</strong></li></ul></li></ol><h2 id="e64ec378-a861-421e-a5a2-03066367ed80" class=""><strong>七. 申诉材料</strong></h2><ol type="1" id="7521db6e-7fac-41ee-bab7-f499a7511e76" class="numbered-list" start="1"><li>被冻结、屏蔽、删除的侵权链接的被投诉方的姓名（名称）、地址及营业执照（单位）、身份证明（个人）、联系方式等；</li></ol><ol type="1" id="05206bf9-f221-4692-8fff-715931ba5d26" class="numbered-list" start="2"><li>要求恢复的被冻结、屏蔽的侵权链接的准确名称、网页截图及在<strong>韩小多短剧</strong>上的链接地址（于word或excel附件中列明）；</li></ol><ol type="1" id="f5136670-9cd7-4948-a180-e6970db1cc29" class="numbered-list" start="3"><li>认为不构成侵权的初步证明材料<ul id="e7ed5705-fb73-4cfa-8f7f-e0979957715a" class="bulleted-list"><li style="list-style-type:disc">权属证明材料：包括但不限于对被冻结、屏蔽的侵权链接享有知识产权或使用权、信息网络传播权等权属证明、创作手稿、经权威机构签发的作品创作时间戳、作品备案证书、授权书等能证明被投诉方拥有相关权利的有效权属证明；</li></ul><ul id="b6ec94e5-20c2-4458-90cc-227da38e1bbc" class="bulleted-list"><li style="list-style-type:disc">被投诉方提供的笔记、商品、服务或直播等内容未构成侵权的理由陈述：针对投诉理由的直接驳斥，包括对事实的否认、相关法律法规的说明等。</li></ul><ul id="f388b62c-6f46-41b6-9800-ca5b3c5a2066" class="bulleted-list"><li style="list-style-type:disc">被投诉方提供的笔记、商品、服务或直播等内容未构成侵权的证明材料：包括但不限于被投诉方提供的笔记、商品、服务或直播等未侵犯权利人的人身权、著作权、商标权或专利权等权利的有效证明材料。</li></ul></li></ol><ol type="1" id="d3277139-548b-4a7e-9c9e-f25f69c80d2e" class="numbered-list" start="4"><li>被投诉方的保证：被投诉方应对 未侵权声明.docx 中的陈述和所提供材料的真实性、有效性和合法性负责，保证承担因被投诉方的答辩而恢复被投诉笔记、商品、服务或直播等内容给<strong>韩小多短剧</strong>造成的全部损失及由此产生的全部法律责任。</li></ol><ol type="1" id="e2c5e798-726b-4b5d-8c59-40db8288d93c" class="numbered-list" start="5"><li>如委托他人进行申诉，还应提供合法有效的授权委托书及受托人的身份证明文件。</li></ol><ol type="1" id="86e41824-38bf-4b3c-960c-3103bb48d38e" class="numbered-list" start="6"><li>被投诉方应提供经过亲笔签名或加盖公章的 未侵权声明.docx 扫描件，否则<strong>韩小多短剧</strong>将不予受理。</li></ol><h2 id="f0108d95-90b5-4f0f-9817-206775ffb527" class=""><strong>八. 投诉注意事项</strong></h2><ol type="1" id="a0573eaf-49fe-4dd5-a5cb-5ea26c9354a7" class="numbered-list" start="1"><li>为保证投诉的问题能够及时有效的解决，请按照该指引的要求提供真实有效、完整清晰的材料，否则投诉不予处理。</li></ol><ol type="1" id="c247eea9-3000-46ca-87a9-67177e6d8564" class="numbered-list" start="2"><li>投诉人应保证所提交的材料都是真实、有效和合法的，并承担要求“<strong>韩小多短剧</strong>”冻结、屏蔽、删除相关侵权链接所引起的一切法律后果和连带责任。</li></ol><ol type="1" id="e1e59f8f-783c-46ba-af03-7d01b4376b58" class="numbered-list" start="3"><li>“<strong>韩小多短剧</strong>”有权利和义务在法律法规规定及审核人员的认知水平、能力范围内，对投诉人的投诉作出判断、处理和答复。“<strong>韩小多短剧</strong>”不对投诉人的投诉是否得到某种结果作出任何形式的承诺或保证。</li></ol><ol type="1" id="da025373-10bf-4b2c-a55f-bf830c5189b3" class="numbered-list" start="4"><li>《侵权投诉指引》自公布即生效，在法律规定的范围内，“<strong>韩小多短剧</strong>”有权修改本指引。</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
